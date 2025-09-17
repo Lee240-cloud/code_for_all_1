@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Guide - Hello Korea</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 class="site-title" onclick="window.location.href='index.html'">Hello Korea</h1>
+        <nav class="navigation">
+            <button class="nav-btn active">Life Guide</button>
+            <button class="nav-btn" onclick="window.location.href='community.html'">Community</button>
+            <button class="nav-btn" onclick="window.location.href='qa.html'">Q&A</button>
+            <button class="nav-btn" onclick="window.location.href='map.html'">Map</button>
+            <button class="nav-btn" onclick="window.location.href='my-page.html'">My Page</button>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <h1 class="page-title">Life Guide</h1>
+        <p class="page-subtitle">Essential guides for living in Korea</p>
+        
+        <div class="cards-grid">
+            <div class="guide-card" onclick="openCardModal('banking-modal')">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop" alt="Korean Bank">
+                </div>
+                <h3>Banking Guide</h3>
+                <p>Complete guide to opening a bank account in Korea</p>
+                <span class="read-more">Read More →</span>
+            </div>
+
+            <div class="guide-card" onclick="openCardModal('housing-modal')">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=250&fit=crop" alt="Korean Apartment">
+                </div>
+                <h3>Housing Guide</h3>
+                <p>Everything you need to know about finding housing</p>
+                <span class="read-more">Read More →</span>
+            </div>
+
+            <div class="guide-card" onclick="openCardModal('healthcare-modal')">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=250&fit=crop" alt="Korean Hospital">
+                </div>
+                <h3>Healthcare Guide</h3>
+                <p>Navigate Korea's healthcare system with confidence</p>
+                <span class="read-more">Read More →</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Banking Modal -->
+    <div id="banking-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('banking-modal')">&times;</span>
+            <div class="card-slides">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" alt="Bank Building">
+                    <h3>Opening a Bank Account in Korea</h3>
+                    <p>Essential step for long-term residents. Major banks include KB, Shinhan, Woori, and Hana Bank.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop" alt="Documents">
+                    <h3>Required Documents</h3>
+                    <p>You'll need: Passport, Alien Registration Card (ARC), phone number, and initial deposit (usually 10,000-50,000 KRW).</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=600&h=400&fit=crop" alt="Bank Interior">
+                    <h3>Choosing Your Bank</h3>
+                    <p>Consider location convenience, English support, online banking features, and international transfer fees.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop" alt="Mobile Banking">
+                    <h3>Mobile Banking Setup</h3>
+                    <p>Download your bank's app and set up mobile banking for convenient 24/7 access to your account.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?w=600&h=400&fit=crop" alt="ATM">
+                    <h3>Using ATMs and Cards</h3>
+                    <p>Korean ATMs operate 24/7. Your debit card works at most locations, but always carry some cash.</p>
+                </div>
+            </div>
+            <div class="slide-controls">
+                <button onclick="changeSlide('banking-modal', -1)">❮</button>
+                <span class="slide-counter">1 / 5</span>
+                <button onclick="changeSlide('banking-modal', 1)">❯</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Housing Modal -->
+    <div id="housing-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('housing-modal')">&times;</span>
+            <div class="card-slides">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&h=400&fit=crop" alt="Korean Apartment">
+                    <h3>Finding Housing in Korea</h3>
+                    <p>From goshiwons to apartments, understand your housing options in Korea.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=400&fit=crop" alt="Goshiwon">
+                    <h3>Types of Housing</h3>
+                    <p>Goshiwon (small rooms), officetel (studio apartments), apartments, and sharehouses each offer different benefits.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&h=400&fit=crop" alt="Contract">
+                    <h3>Deposit System</h3>
+                    <p>Understand Jeonse (large deposit, no monthly rent) vs Wolse (smaller deposit + monthly rent) systems.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop" alt="Real Estate">
+                    <h3>Finding Properties</h3>
+                    <p>Use apps like Zigbang, Dabang, or visit local real estate offices (부동산) in your desired area.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1560448204-61dc36dc98c8?w=600&h=400&fit=crop" alt="Moving">
+                    <h3>Moving In</h3>
+                    <p>Complete utility setup, register your address, and don't forget to get renter's insurance.</p>
+                </div>
+            </div>
+            <div class="slide-controls">
+                <button onclick="changeSlide('housing-modal', -1)">❮</button>
+                <span class="slide-counter">1 / 5</span>
+                <button onclick="changeSlide('housing-modal', 1)">❯</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Healthcare Modal -->
+    <div id="healthcare-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('healthcare-modal')">&times;</span>
+            <div class="card-slides">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop" alt="Korean Hospital">
+                    <h3>Healthcare in Korea</h3>
+                    <p>Korea has excellent healthcare with National Health Insurance covering most residents.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop" alt="Health Insurance">
+                    <h3>National Health Insurance</h3>
+                    <p>All residents must enroll in NHI. Coverage includes most medical treatments with affordable copays.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=600&h=400&fit=crop" alt="Doctor Visit">
+                    <h3>Visiting a Doctor</h3>
+                    <p>For minor issues, visit local clinics. For serious conditions, go to hospitals. Emergency rooms are available 24/7.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1585435557343-3b092031d406?w=600&h=400&fit=crop" alt="Pharmacy">
+                    <h3>Pharmacies and Medication</h3>
+                    <p>Pharmacies (약국) are everywhere. Many medications available over-counter, but some require prescriptions.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop" alt="Emergency">
+                    <h3>Emergency Services</h3>
+                    <p>Call 119 for emergencies. Major hospitals have English-speaking staff and international patient services.</p>
+                </div>
+            </div>
+            <div class="slide-controls">
+                <button onclick="changeSlide('healthcare-modal', -1)">❮</button>
+                <span class="slide-counter">1 / 5</span>
+                <button onclick="changeSlide('healthcare-modal', 1)">❯</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

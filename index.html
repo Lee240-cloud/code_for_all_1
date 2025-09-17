@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Korea - Your Guide to Living in Korea</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1 class="site-title">Hello Korea</h1>
+        <nav class="navigation">
+            <button class="nav-btn" onclick="navigateTo('life-guide')">Life Guide</button>
+            <button class="nav-btn" onclick="navigateTo('community')">Community</button>
+            <button class="nav-btn" onclick="navigateTo('qa')">Q&A</button>
+            <button class="nav-btn" onclick="navigateTo('map')">Map</button>
+            <button class="nav-btn" onclick="navigateTo('my-page')">My Page</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Featured Cards Section -->
+        <section class="featured-section">
+            <div class="cards-container">
+                <div class="card featured-card">
+                    <h2 class="card-title">Today's Tip</h2>
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=200&fit=crop" alt="T-money Card">
+                        </div>
+                        <h3>How to Use T-money Card</h3>
+                        <p>Essential guide for using public transportation in Seoul</p>
+                        <button class="read-more-btn" onclick="openCardModal('tip-modal')">Read More</button>
+                    </div>
+                </div>
+
+                <div class="card featured-card">
+                    <h2 class="card-title">Today's News</h2>
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=400&h=200&fit=crop" alt="Seoul Government">
+                        </div>
+                        <h3>New Foreign-Friendly Services</h3>
+                        <p>Seoul expands multilingual support for government services</p>
+                        <button class="read-more-btn" onclick="openCardModal('news-modal')">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preview Section -->
+        <section class="preview-section">
+            <h2 class="section-title">Explore Our Services</h2>
+            <div class="preview-grid">
+                <div class="preview-card" onclick="navigateTo('life-guide')">
+                    <div class="preview-image">
+                        <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=300&h=200&fit=crop" alt="Life Guide">
+                    </div>
+                    <h3>Life Guide</h3>
+                    <p>Essential guides for daily life in Korea</p>
+                </div>
+
+                <div class="preview-card" onclick="navigateTo('community')">
+                    <div class="preview-image">
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=300&h=200&fit=crop" alt="Community">
+                    </div>
+                    <h3>Community</h3>
+                    <p>Connect with fellow expats and locals</p>
+                </div>
+
+                <div class="preview-card" onclick="navigateTo('qa')">
+                    <div class="preview-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=300&h=200&fit=crop" alt="Q&A">
+                    </div>
+                    <h3>Q&A</h3>
+                    <p>Get answers to your questions about Korea</p>
+                </div>
+
+                <div class="preview-card" onclick="navigateTo('map')">
+                    <div class="preview-image">
+                        <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=300&h=200&fit=crop" alt="Map">
+                    </div>
+                    <h3>Map</h3>
+                    <p>Find foreign-friendly places near you</p>
+                </div>
+
+                <div class="preview-card" onclick="navigateTo('my-page')">
+                    <div class="preview-image">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=200&fit=crop" alt="My Page">
+                    </div>
+                    <h3>My Page</h3>
+                    <p>Manage your profile and preferences</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Language Selector -->
+    <footer class="footer">
+        <div class="language-selector">
+            <button class="language-btn" onclick="toggleLanguageMenu()">Language ▼</button>
+            <div class="language-menu" id="languageMenu">
+                <button class="language-option" onclick="changeLanguage('ko')">한국어</button>
+                <button class="language-option" onclick="changeLanguage('en')">English</button>
+                <button class="language-option" onclick="changeLanguage('zh')">中文</button>
+                <button class="language-option" onclick="changeLanguage('ja')">日本語</button>
+                <button class="language-option" onclick="changeLanguage('vi')">Tiếng Việt</button>
+                <button class="language-option" onclick="changeLanguage('es')">Español</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Today's Tip -->
+    <div id="tip-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('tip-modal')">&times;</span>
+            <div class="card-slides">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&h=400&fit=crop" alt="T-money Card">
+                    <h3>T-money Card: Your Key to Seoul Transportation</h3>
+                    <p>The T-money card is essential for navigating Seoul's extensive public transportation system.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop" alt="Subway Station">
+                    <h3>Where to Buy</h3>
+                    <p>Purchase your T-money card at any subway station ticket machine or convenience store like 7-Eleven, CU, or GS25.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1573108037329-37aa135a142e?w=600&h=400&fit=crop" alt="Card Machine">
+                    <h3>How to Load Money</h3>
+                    <p>Add money at ticket machines, convenience stores, or through mobile apps. Minimum charge is usually 1,000 KRW.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=600&h=400&fit=crop" alt="Bus">
+                    <h3>Using on Buses</h3>
+                    <p>Tap when boarding and when getting off. The fare is automatically calculated based on distance traveled.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1589807903567-0a8d98b62c15?w=600&h=400&fit=crop" alt="Subway">
+                    <h3>Subway Benefits</h3>
+                    <p>Enjoy discounted fares and seamless transfers between different subway lines across Seoul metropolitan area.</p>
+                </div>
+            </div>
+            <div class="slide-controls">
+                <button onclick="changeSlide('tip-modal', -1)">❮</button>
+                <span class="slide-counter">1 / 5</span>
+                <button onclick="changeSlide('tip-modal', 1)">❯</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Today's News -->
+    <div id="news-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('news-modal')">&times;</span>
+            <div class="card-slides">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop" alt="Seoul City Hall">
+                    <h3>Seoul Launches Multilingual Government Services</h3>
+                    <p>Major breakthrough for foreign residents as Seoul expands language support across all district offices.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop" alt="Translation Services">
+                    <h3>7 Languages Now Supported</h3>
+                    <p>Services available in Korean, English, Chinese, Japanese, Vietnamese, Spanish, and Arabic starting this month.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1577415124269-fc1140a69e91?w=600&h=400&fit=crop" alt="Government Office">
+                    <h3>Available Services</h3>
+                    <p>Residence registration, tax payments, civil complaints, business registration, and social welfare applications.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop" alt="Digital Services">
+                    <h3>Online Platform Launch</h3>
+                    <p>New digital platform allows foreigners to access government services online with real-time translation.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop" alt="Support Center">
+                    <h3>Dedicated Support Centers</h3>
+                    <p>25 new foreign resident support centers opening across Seoul to provide personalized assistance.</p>
+                </div>
+            </div>
+            <div class="slide-controls">
+                <button onclick="changeSlide('news-modal', -1)">❮</button>
+                <span class="slide-counter">1 / 5</span>
+                <button onclick="changeSlide('news-modal', 1)">❯</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
